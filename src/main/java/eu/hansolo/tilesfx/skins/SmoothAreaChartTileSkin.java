@@ -261,7 +261,7 @@ public class SmoothAreaChartTileSkin extends TileSkin {
             resizeDynamicText();
         }
         dataSize  = data.size();
-        maxValue  = data.stream().max(Comparator.comparing(c -> c.getValue())).get().getValue();
+        maxValue = tile.getMaxValue();
         hStepSize = width / (dataSize - 1);
         vStepSize = (height * 0.5) / maxValue;
 
